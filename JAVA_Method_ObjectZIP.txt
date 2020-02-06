@@ -1,0 +1,21 @@
+JAVA Method
+Arrays.toString()
+matches()
+°´Ã¼.equals(°´Ã¼)
+
+
+
+JAVA Object  
+Pattern 
+StringBuilder 
+Array
+List
+Set
+HashMap 
+String
+Int
+Char
+
+
+
+
