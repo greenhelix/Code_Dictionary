@@ -16,12 +16,12 @@
 
 1. Array
    배열이름.sort()
-   '''kotlin
+   ```kotlin
    var intArray = intArrayOf(3,2,1,0)
    println(intArray.joinToString()) // 3,2,1,0
    intArray.sort()
    println(intArray.joinToString()) // 0,1,2,3
-   '''
+   ```
 
 ## 객체
 
