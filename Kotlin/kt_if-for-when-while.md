@@ -6,8 +6,8 @@
 
     - for ()
 
-    for(i in 1 until 10){}
-    for(i in 10){}
+    for(i in 1 until 10){} </d>
+    for(i in 10){} </d>
     for(i in 1..10 ){}
 
 ## 조건문
@@ -15,7 +15,9 @@
 ## 배열
 
 1. Array
-   배열이름.sort()
+
+   배열이름.sort() </d>
+
    ```kotlin
    var intArray = intArrayOf(3,2,1,0)
    println(intArray.joinToString()) // 3,2,1,0
