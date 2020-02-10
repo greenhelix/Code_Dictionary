@@ -6,7 +6,7 @@
 # JAVA Object
 
 - Pattern
-- StringBuilder
+- [StringBuilder](https://github.com/greenhelix/JAVA-Dictionary/blob/master/Method/StringBuilder.md)
 - Array
 - List
 - Set
