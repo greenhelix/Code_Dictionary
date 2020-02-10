@@ -8,7 +8,7 @@
 
   1. [API](<https://docs.oracle.com/javase/7/docs/api/java/lang/StringBuilder.html#insert(int,%20char)>)
 
-  2. [tutorial](https://www.tutorialspoint.com/java/lang/stringbuilder_insert_chararray_len.html)
+  2. [tutorial](https://www.tutorialspoint.com/java/lang/stringbuilder_insert_chararray_len.htm)
 
 ---
 
