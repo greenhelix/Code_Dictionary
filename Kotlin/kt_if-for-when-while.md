@@ -6,9 +6,11 @@
 
     - for ()
 
-    for(i in 1 until 10){} </d>
-    for(i in 10){} </d>
-    for(i in 1..10 ){}
+      for(i in 1 until 10){}
+
+      for(i in 10){}
+
+      for(i in 1..10 ){}
 
 ## 조건문
 
@@ -16,7 +18,7 @@
 
 1. Array
 
-   배열이름.sort() </d>
+   - 배열이름.sort()
 
    ```kotlin
    var intArray = intArrayOf(3,2,1,0)
@@ -29,5 +31,5 @@
 
 1. 단항 산술 연산자
 
-- ++, --, +, -
-  자바와 동일하게 사용되는것으로 보임.
+   - ++, --, +, -
+     자바와 동일하게 사용되는것으로 보임.
