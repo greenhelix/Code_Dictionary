@@ -1,16 +1,16 @@
 # JAVA Method
 
-#Arrays.toString()
-#matches()
+- Arrays.toString()
+- matches()
 
 ## JAVA Object
 
-    - Pattern
-    - StringBuilder
-    - Array
-    - List
-    - Set
-    - HashMap
-    - String
-    - Int
-    - Char
+- Pattern
+- StringBuilder
+- Array
+- List
+- Set
+- HashMap
+- String
+- Int
+- Char
