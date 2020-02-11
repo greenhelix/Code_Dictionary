@@ -14,3 +14,4 @@
 - String
 - Int
 - Char
+- [CharSequence](https://github.com/greenhelix/JAVA-Dictionary/blob/master/Object/CharSeqeunce.md)
