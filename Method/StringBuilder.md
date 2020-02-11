@@ -45,17 +45,22 @@ hello.toString();
 
 ## append
 
-- append(boolean)
-- append(char)
-- append(char[])
+- append()
+  - boolean : t/f 값을 뒤에 붙이는 것임
+  - char : 단순 문자하나를 갔다 붙이는 것임
+  - char[] : 문자 배열을 통째로 갔다가 붙일 수 있음.
+  - charSequence : 변형가능한 문자를 갔다 붙임.
+  - String
+  - stringbuffer
+  - int, double, float, long : 다 갔다붙이기 가능.
 - append(char[], str, end)
-- append(CharSequence)
-- append()
-- append()
-- append()
+  char배열에서, str인덱스 지점 부터 end전까지의 문자 배열을 붙이겠다.
 
 ## insert
 
+- insert()
+  - int, double, float, long
+  - String, char, charSequence... 다 삽입가능
 - insert(int, boolean)
   int 위치에다가 t/f의 글자를 박아줌.
 - insert(int, charArray, chStr, chEnd)
@@ -66,4 +71,12 @@ hello.toString();
 
 ## delete(int start, int end)
 
+## legnth()
+
+int형으로 길이를 리턴해줌.
+
 ## getChars(int srcBegin, int srcEnd, char[] dst, int dstBegin)
+
+### codePointAt(int index)
+
+해당 위치의 문자의 아스키코드를 리턴해줌.
