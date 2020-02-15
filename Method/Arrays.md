@@ -109,8 +109,8 @@
 ```java
     int[] arr1 = new int[] {11, 22, 33, 44};
     int[] arr2 = Arrays.copyOf(arr1, 10);
-    System.out.println(Arrays.toString(arr2));
-    // copyOf>>> [11, 22, 33, 44, 0, 0, 0, 0, 0, 0]
+    System.out.println("int>>copyOf>>> " + Arrays.toString(arr2));
+    // int >>> copyOf>>> [11, 22, 33, 44, 0, 0, 0, 0, 0, 0]
 
     Integer[] intarr1 = new Integer[] { 11, 22, 33, 44 };
     Integer[] intarr2 = Arrays.copyOf(intarr1, 10);
