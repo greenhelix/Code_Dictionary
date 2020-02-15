@@ -5,16 +5,26 @@
 
 ## Method
 
-1. deepToString(배열)
+1. toString() //deepToString()
+
    > 배열을 출력할 때 사용한다.
+
+   - 1. toString()
+   - 2. deepToString()
+        > > deepto는 List나 다른 것들, 즉 다차원 배열을 출력할때 사용한다..
 
 ```java
     int [] a = {1,2,3,4,5};
-    System.out.pritnln(Arrays.deepToString(a));
+    int[][] b = {{2,1},{3,3,3}};
+
+    System.out.pritnln(Arrays.toString(a));
+    System.out.pritnln(Arrays.deepToString(b));
     // out>>  [1,2,3,4,5]
+    // out>>  [[2,1],[3,3,3]]
+
 ```
 
-2. equals(배열, 배열)
+2. equals(arr, arr)
    > 같은 형의 배열 2개를 서로 같은지 비교해주는 메서드이다. 리턴값은 t/f 로 나눠진다.
 
 ```java
@@ -25,7 +35,7 @@
     System.out.pritnln(Arrays.equeals(a,c)); // false
 ```
 
-3. fill(배열, 채우고 싶은것)
+3. fill(arr, obj)
 
 - 1. fill(배열, 객체)
      > 어떤 불린 배열에서 특정형태의 객체로 채워주는 메서드이다.
@@ -35,6 +45,7 @@
     Arrays.fill(a, true);
     System.out.println(Arrays.toString(a));
     // [true, true, true]
+
     int [] a = {1, 2, 4};
     Arrays.fill(a, 5);
     System.out.println(Arrays.toString(a));
@@ -51,10 +62,40 @@
     // [1,5,5,5,5,9,10]
 ```
 
-4. hashCode(배열)
+4. hashCode()
 
    > 주어진 배열의 해시코드를 넣어주는 메서드이다.
 
-   > > [Arrays.java참고]()
+   > > [Arrays.java참고](https://github.com/greenhelix/JAVA-Dictionary/blob/master/Method/Arrays.java)
 
-5.
+5. sort()
+   > 기본적으로 sort 메서드는 오름차순으로 정렬을 한다.
+
+- 1. sort(arr)
+
+```java
+    int [] a = {1, 2, 10, 7, 8, 9, 4};
+    Arrays.sort(a);
+    System.out.println(Arrays.toString(a));
+    // [1, 2, 4, 7, 8, 9, 10]
+```
+
+- 2. sort(arr, 시작idx, 끝idx)
+
+```java
+    int [] a = {1, 2, 10, 7, 8, 9, 4};
+    Arrays.sort(a,1, 4);
+    System.out.println(Arrays.toString(a));
+    // [1, 2, 7, 8, 10, 9, 4]
+```
+
+- 3. sort(arr, comparator<> obj)
+     > 특정 컴퍼레이터(비교값)의 객체를 선언해준다.
+     > 그리고나서 그것의 규칙대로, arr의 오름차순을 내림차순으로 간단히 바꿀수도 있다.
+
+```java
+Integer arr[]  = new Integer[]{2,3,5,7,8,10};
+Comparator<Integer> comp = Collections.reverseOrder();
+Arrays.sort(arr, comp);
+// [10,8,7,5,3,2,1]
+```
