@@ -65,6 +65,9 @@ class Array {
         Integer[] intarr2 = Arrays.copyOf(intarr1, 8);
         System.out.println("Integer>>copyOf>>> " + Arrays.toString(intarr2));
 
+        Integer[] intarr3 = Arrays.copyOf(intarr1, 4);
+        System.out.println("Integer>>equal?? " + Arrays.equals(intarr1, intarr3));
+
         return "";
     }
 

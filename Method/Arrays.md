@@ -126,6 +126,8 @@
 
 - 2.  copyOfRange()
       > 원하는 범위만큼 복사.
+      > 시작점은 해당되는 값, 끝점은 그 인덱스의 바뤼 뒤에 값까지
+      > 즉, 끝점은 시작점에서 총 몇개인지를 나타냄
 
 ```java
     int[] arr1 = new int[] {11, 22, 33, 44};
@@ -135,8 +137,10 @@
 ```
 
 7. asList()
-   >
+   > array to list
 
 ```java
-
+    String a[] = new String[] {"aa", "bb", "cc"};
+    List list1 = Arrays.asList(a);
+    System.out.println("to List>>>" + list1);
 ```
