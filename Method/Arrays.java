@@ -10,6 +10,7 @@ class Array {
         int[] b = { 1, 2, 3 };
         hashCode(b);
         sort(b);
+        copyOf(b);
 
     }
 
@@ -44,6 +45,25 @@ class Array {
         for (Integer number : sArr) {
             System.out.println("Number = " + number);
         }
+
+        return "";
+    }
+
+    static String copyOf(int[] a) {
+        int[] arr1 = new int[] { 11, 22, 33, 44 };
+        int[] arr2 = Arrays.copyOf(arr1, 10);
+        System.out.println("copyOf>>> " + Arrays.toString(arr2));
+
+        int[] arr3 = Arrays.copyOfRange(arr1, 0, 6);
+        System.out.println("copyOfRange>>> " + Arrays.toString(arr3));
+
+        char[] char1 = new char[] { 'a', 'b', 'v', 'c' };
+        char[] char2 = Arrays.copyOf(char1, 10);
+        System.out.println("charCOPY>>> " + Arrays.toString(char2));
+
+        Integer[] intarr1 = new Integer[] { 11, 22, 33, 44 };
+        Integer[] intarr2 = Arrays.copyOf(intarr1, 8);
+        System.out.println("Integer>>copyOf>>> " + Arrays.toString(intarr2));
 
         return "";
     }

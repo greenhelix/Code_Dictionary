@@ -94,8 +94,49 @@
      > 그리고나서 그것의 규칙대로, arr의 오름차순을 내림차순으로 간단히 바꿀수도 있다.
 
 ```java
-Integer arr[]  = new Integer[]{2,3,5,7,8,10};
-Comparator<Integer> comp = Collections.reverseOrder();
-Arrays.sort(arr, comp);
-// [10,8,7,5,3,2,1]
+    Integer arr[]  = new Integer[]{2,3,5,7,8,10};
+    Comparator<Integer> comp = Collections.reverseOrder();
+    Arrays.sort(arr, comp);
+    // [10,8,7,5,3,2,1]
+```
+
+6. copyOf(), copyOfRange()
+
+   - 1. copyOf()
+        > 복사. null값 허용.
+        > 범위를 넘어서 설정할경우
+
+```java
+    int[] arr1 = new int[] {11, 22, 33, 44};
+    int[] arr2 = Arrays.copyOf(arr1, 10);
+    System.out.println(Arrays.toString(arr2));
+    // copyOf>>> [11, 22, 33, 44, 0, 0, 0, 0, 0, 0]
+
+    Integer[] intarr1 = new Integer[] { 11, 22, 33, 44 };
+    Integer[] intarr2 = Arrays.copyOf(intarr1, 10);
+    System.out.println("Integer>>copyOf>>> " + Arrays.toString(intarr2));
+    // Integer>>copyOf>>> [11, 22, 33, 44, null, null, null, null]
+
+    char[] char1 = new char[] { 'a', 'b', 'v', 'c' };
+    char[] char2 = Arrays.copyOf(char1, 10);
+    System.out.println("charCOPY>>> " + Arrays.toString(char2));
+    // charCOPY>>> [a, b, v, c,  ,  ,  ,  ,  ,  ]
+
+```
+
+- 2.  copyOfRange()
+      > 원하는 범위만큼 복사.
+
+```java
+    int[] arr1 = new int[] {11, 22, 33, 44};
+    int[] arr3 = Arrays.copyOfRange(arr1, 0, 6);
+    System.out.println("copyOfRange>>> " + Arrays.toString(arr3));
+    // copyOfRange>>> [11, 22, 33, 44, 0, 0]
+```
+
+7. asList()
+   >
+
+```java
+
 ```
