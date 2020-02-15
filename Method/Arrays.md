@@ -25,23 +25,36 @@
     System.out.pritnln(Arrays.equeals(a,c)); // false
 ```
 
-3. fill(배열, t/f)
+3. fill(배열, 채우고 싶은것)
 
-- 1. fill(배열, t/f)
-     > 어떤 불린 배열에서 t/f 로 채워주는 메서드이다.
+- 1. fill(배열, 객체)
+     > 어떤 불린 배열에서 특정형태의 객체로 채워주는 메서드이다.
 
 ```java
     boolean [] a = {true, false, false};
     Arrays.fill(a, true);
     System.out.println(Arrays.toString(a));
     // [true, true, true]
+    int [] a = {1, 2, 4};
+    Arrays.fill(a, 5);
+    System.out.println(Arrays.toString(a));
+    // [5, 5, 5]
 ```
 
-- 2. fill(배열,시작idx, 끝idx, t/f)
+- 2. fill(배열,시작idx, 끝idx, 객체)
      > 특정 인덱스 부분만 t/f값으로 채우고 싶을때.
 
-4.
-
 ```java
-
+    int [] a = {1, 2, 4,7,8,9,10};
+    Arrays.fill(a,1, 4, 5);
+    System.out.println(Arrays.toString(a));
+    // [1,5,5,5,5,9,10]
 ```
+
+4. hashCode(배열)
+
+   > 주어진 배열의 해시코드를 넣어주는 메서드이다.
+
+   > > [Arrays.java참고]()
+
+5.
