@@ -1,4 +1,4 @@
-package method;
+package javamethod;
 
 import java.util.Arrays;
 import java.util.Collections;
