@@ -12,4 +12,5 @@
   ***
 
   프레그먼크 간단 개념도
+
   <img src="https://user-images.githubusercontent.com/49743467/75620392-c7fda900-5bcb-11ea-9f8b-563f5b40d0e5.jpg" width="70%">
