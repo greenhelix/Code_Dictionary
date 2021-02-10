@@ -1,6 +1,6 @@
 # List reverse method -
 A = [0, 10, 20, 40]
-A.reverse()
+A.reverse()  # not print it
 
 print(A)    # [40, 20, 10, 0]
 
