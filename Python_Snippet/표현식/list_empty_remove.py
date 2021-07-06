@@ -1,13 +1,15 @@
 # 리스트 안에 비어있는 값 제거하기
 sample1 = ['', ' Wow ', ' header ', ' ', ' Hey ', ' ', '']
 sample2 = ['', ' W ow ', ' header ', ' ', ' Hey ', ' ', '']
-
+sample3 = ['', '-', '+', '*', '']
 # 이러한 비어있는 값이 존재하는 리스트를 간단하게 제거하는 방법
 # join 과 split으로 가능하다.(추천)
 print(''.join(sample1).split())
 print(''.join(sample2).split())
+print(''.join(sample3).split())
 # sample1 >>> ['Wow', 'header', 'Hey']
 # sample2 >>> ['W', 'ow', 'header', 'Hey']
+# sample3 >>> ['-+*']
 # 각 요소에 띄어쓰기가 포함되어있다면, 분할이 안된다.
 
 
@@ -20,5 +22,9 @@ print(sample1)
 sample2 = list(map(lambda x: x.strip(), sample2))
 sample2 = list(filter(lambda x: x != '', sample2))
 print(sample2)
+sample3 = list(map(lambda x: x.strip(), sample3))
+sample3 = list(filter(lambda x: x != '', sample3))
+print(sample3)
 # sample1 >>> ['Wow', 'header', 'Hey']
 # sample2 >>> ['W ow', 'header', 'Hey']
+# sample3 >>> ['-', '+', '*']
