@@ -14,7 +14,12 @@
         for(i in 10 downTo 1 step 2){}  // 10부터 2씩감소, 1 까지 반복
     ```
 
+    > forEach{}
+
 ## 조건문
+
+- if
+- when
 
 ## 배열
 
@@ -28,6 +33,24 @@
    intArray.sort()
    println(intArray.joinToString()) // 0,1,2,3
    ```
+
+2. Set
+
+> sortedSetOf()
+> [method](https://docs.oracle.com/javase/8/docs/api/java/util/SortedSet.html)
+> 자동 오름차순 정렬을 해주는 Set이다.
+
+```kotlin
+    val a = sortedSetOf<Int>()
+    a.add(3)
+    a.add(2)
+    a.add(1)
+    println(a) //[1,2,3]
+    println(a.first()) //1
+    println(a.last()) //3
+```
+
+set의 모든 메서드는 상속받고, first, last 메서드를 추가된다.
 
 ## 객체
 
