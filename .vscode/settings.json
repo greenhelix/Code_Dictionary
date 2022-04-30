@@ -1,8 +1,37 @@
 {
-    "python.pythonPath": "C:\\Users\\dlrgh\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
-    "java.javaPath": "C:\\Program Files\\Java\\jdk1.8.0_221\\bin\\java.exe",
-    "java.project.sourcePaths": [
-        "Android_Snippet/daggerSample"
-    ],
-    "jupyter.jupyterServerType": "local"
+  "python.pythonPath": "C:\\Users\\dlrgh\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+  "java.javaPath": "C:\\Program Files\\Java\\jdk1.8.0_221\\bin\\java.exe",
+  "java.project.sourcePaths": [
+    "Android_Snippet/daggerSample"
+  ],
+  "jupyter.jupyterServerType": "local",
+  "C_Cpp.errorSquiggles": "Disabled",
+  "C_Cpp_Runner.cCompilerPath": "C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/gcc.exe",
+  "C_Cpp_Runner.cppCompilerPath": "C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/g++.exe",
+  "C_Cpp_Runner.debuggerPath": "C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/gdb.exe",
+  "C_Cpp_Runner.cStandard": "",
+  "C_Cpp_Runner.cppStandard": "",
+  "C_Cpp_Runner.msvcBatchPath": "",
+  "C_Cpp_Runner.warnings": [
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic"
+  ],
+  "C_Cpp_Runner.enableWarnings": true,
+  "C_Cpp_Runner.warningsAsError": false,
+  "C_Cpp_Runner.compilerArgs": [],
+  "C_Cpp_Runner.linkerArgs": [],
+  "C_Cpp_Runner.includePaths": [],
+  "C_Cpp_Runner.includeSearch": [
+    "*",
+    "**/*"
+  ],
+  "C_Cpp_Runner.excludeSearch": [
+    "**/build",
+    "**/build/**",
+    "**/.*",
+    "**/.*/**",
+    "**/.vscode",
+    "**/.vscode/**"
+  ]
 }
