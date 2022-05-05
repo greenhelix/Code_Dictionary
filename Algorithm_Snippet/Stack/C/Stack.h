@@ -6,8 +6,6 @@
 
 #define MAX 10
 
-int count = 0;
-
 struct stack
 {
     int iteams[MAX];

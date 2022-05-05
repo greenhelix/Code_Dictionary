@@ -1,5 +1,7 @@
 #include "Stack.h"
 
+int count = 0;
+
 void createEmptyStack(st *s)
 {
     s->top = -1;

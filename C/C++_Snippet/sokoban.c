@@ -2,6 +2,6 @@
 
 int main()
 {
-    puts("Hello");
+    printf("HELLO IK");
     return 1;
 }
