@@ -38,10 +38,12 @@ void BFS(Vertex *V, LinkedQueue *Queue)
 
     while (!LQ_IsEmpty(Queue))
     { // 큐가 다 비어질 때까지 계속 돌린다~
+        // LQ_Print(Queue);
 
         Vertex *Popped = LQ_Dequeue(Queue); // 큐에서 맨앞에꺼 빼서 노드 객체로 선언~!
 
         V->Data = Popped->Data;
+        printf("Dqeueu! %d\n", V->Data);
 
         E = V->AdjacencyList;
 
@@ -58,6 +60,7 @@ void BFS(Vertex *V, LinkedQueue *Queue)
                 V->Visited = Visited; // 방문 인증 해주고
 
                 LQ_Enqueue(Queue, LQ_CreateNode(V->Data)); // 큐에 추가!!!
+                printf("Enqueue! %d\n", V->Data);
             }
 
             E = E->Next; // 조건 성립안된다면 다른 간선으로 이동~

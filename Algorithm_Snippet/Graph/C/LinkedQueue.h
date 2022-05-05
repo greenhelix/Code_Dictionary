@@ -31,5 +31,5 @@ void LQ_Enqueue(LinkedQueue *Queue, Vertex *V);
 Vertex *LQ_Dequeue(LinkedQueue *Queue);
 
 int LQ_IsEmpty(LinkedQueue *Queue);
-
+void LQ_Print(LinkedQueue *Queue);
 #endif

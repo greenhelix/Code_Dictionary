@@ -1,4 +1,4 @@
-#ifndef GRAPH_H
+#ifndef GRAPH_H // ifndef GRAPH_H를 먼저 전처리해라.. # 붙은것들 먼저 처리
 #define GRAPH_H
 
 #include <stdio.h>

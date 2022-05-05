@@ -56,7 +56,7 @@ void LQ_DestroyNode(Vertex *V)
 void LQ_Enqueue(LinkedQueue *Queue, Vertex *V)
 {
     if (Queue->Front == NULL)
-    { // 큐에 노드가 없다면 맨앞에 넣는다.
+    { // 큐에 노드가 없다면 맨앞에 넣는다.(앞 뒤를 해당 노드로 가리킨다.)
         Queue->Front = V;
         Queue->Rear = V;
         Queue->Count++;
@@ -64,12 +64,12 @@ void LQ_Enqueue(LinkedQueue *Queue, Vertex *V)
     else
     { // 큐에 노드가 있다면 append 해준다.
         Queue->Rear->Next = V;
-        Queue->Rear = V;
+        Queue->Rear = Queue->Rear->Next;
         Queue->Count++;
     }
 }
 
-Vertex *LQ_Dequeue(LinkedQueue *Queue)
+Vertex *LQ_Dequeue(LinkedQueue *Queue) // 큐에 노드를 뒤에 넣어준다.
 {
     Vertex *V = Queue->Front;
 
@@ -91,4 +91,17 @@ Vertex *LQ_Dequeue(LinkedQueue *Queue)
 int LQ_IsEmpty(LinkedQueue *Queue)
 {
     return (Queue->Front == NULL);
+}
+
+void LQ_Print(LinkedQueue *Q)
+{
+    Vertex *temp = (Vertex *)malloc(sizeof(Vertex));
+    temp = Q->Front;
+    while (temp != NULL)
+    {
+        printf("Queue node %d ->", temp->Data);
+        temp = temp->Next;
+    }
+    printf(" ** %d ->", temp->Data);
+    free(temp);
 }
