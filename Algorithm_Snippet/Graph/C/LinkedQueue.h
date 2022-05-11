@@ -5,28 +5,31 @@
 #include <string.h>
 #include <stdlib.h>
 #include "Graph.h"
+
 typedef int ElementType;
 
-typedef struct tagNode{
+typedef struct tagNode
+{
     ElementType Data;
-    struct tagNode* NextNode;
+    struct tagNode *NextNode;
 } Node;
 
-typedef struct tagLinkedQueue{
-    Node* Front;
-    Node* Rear;
+typedef struct tagLinkedQueue
+{
+    Vertex *Front;
+    Vertex *Rear;
     int Count;
 } LinkedQueue;
 
-void LQ_CreateQueue(LinkedQueue** Queue);
-void LQ_DestroyQueue(LinkedQueue* Queue);
+void LQ_CreateQueue(LinkedQueue **Queue);
+void LQ_DestroyQueue(LinkedQueue *Queue);
 
-Node* LQ_CreateNode(Vertex* NewData);
-void LQ_DestroyNode(Node* _Node);
+Vertex *LQ_CreateNode(ElementType Data);
+void LQ_DestroyNode(Vertex *V);
 
-void LQ_Enqueue(LinkedQueue* Queue, Node* NewNode);
-Node* LQ_Dequeue(LinkedQueue* Queue);
+void LQ_Enqueue(LinkedQueue *Queue, Vertex *V);
+Vertex *LQ_Dequeue(LinkedQueue *Queue);
 
-int LQ_IsEmpty(LinkedQueue* Queue);
-
+int LQ_IsEmpty(LinkedQueue *Queue);
+void LQ_Print(LinkedQueue *Queue);
 #endif
