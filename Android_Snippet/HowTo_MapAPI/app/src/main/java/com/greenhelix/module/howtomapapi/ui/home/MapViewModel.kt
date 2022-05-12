@@ -1,24 +1,18 @@
 package com.greenhelix.module.howtomapapi.ui.home
 
-import android.app.Activity
-import android.content.pm.PackageManager
 import android.graphics.Color
-import android.os.Build
 import android.util.Log
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.naver.maps.geometry.LatLng
-import com.naver.maps.map.*
+import com.naver.maps.map.CameraPosition
+import com.naver.maps.map.MapFragment
+import com.naver.maps.map.NaverMap
+import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.overlay.Marker
 import com.naver.maps.map.util.FusedLocationSource
 import com.naver.maps.map.util.MarkerIcons
-import kotlinx.coroutines.currentCoroutineContext
 
-class HomeViewModel : ViewModel(), OnMapReadyCallback  {
+class MapViewModel : ViewModel(), OnMapReadyCallback  {
 
 //    private val _text = MutableLiveData<String>().apply {
 //        value = "This is home Fragment"
@@ -26,7 +20,7 @@ class HomeViewModel : ViewModel(), OnMapReadyCallback  {
 //    val text: LiveData<String> = _text
     private lateinit var locationSource: FusedLocationSource
 
-    fun getMyPos(fragment: HomeFragment){
+    fun getMyPos(fragment: NaverMapFragment){
         Log.d("Ik", "getMyPos")
         locationSource = FusedLocationSource(fragment, 1000 )
 
