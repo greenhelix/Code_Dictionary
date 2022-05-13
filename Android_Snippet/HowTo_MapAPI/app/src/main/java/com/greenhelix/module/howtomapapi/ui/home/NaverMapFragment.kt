@@ -46,6 +46,10 @@ class NaverMapFragment : Fragment(){
         _binding = FragmentNaverMapBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        binding.mapNaverMyLocation.setOnClickListener {
+
+        }
+
         val mapFragment = childFragmentManager.findFragmentById(R.id.map_naver_frag) as MapFragment?
             ?: MapFragment.newInstance().also {
             childFragmentManager.beginTransaction().add(R.id.map_naver_frag, this).commit()
