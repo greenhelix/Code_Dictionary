@@ -1,5 +1,6 @@
 package com.greenhelix.module.howtomapapi.ui.home
 
+import android.content.Context
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
@@ -12,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.greenhelix.module.howtomapapi.R
 import com.greenhelix.module.howtomapapi.databinding.FragmentNaverMapBinding
+import com.greenhelix.module.howtomapapi.databinding.TestCardBinding
 import com.naver.maps.geometry.LatLng
 import com.naver.maps.map.CameraPosition
 import com.naver.maps.map.MapFragment
@@ -23,12 +25,14 @@ import com.naver.maps.map.overlay.Overlay
 import com.naver.maps.map.util.FusedLocationSource
 import com.naver.maps.map.util.MarkerIcons
 
-class NaverMapFragment : Fragment(), OnMapReadyCallback {
+class NaverMapFragment(context: Context) : Fragment(), OnMapReadyCallback {
 
     private lateinit var mapViewModel: MapViewModel
     private var _binding: FragmentNaverMapBinding? = null
     private val binding get() = _binding!!
     private lateinit var locationSource: FusedLocationSource
+    private var _cardBinding : TestCardBinding? = null
+    private val cardBinding get() = _cardBinding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,14 +43,9 @@ class NaverMapFragment : Fragment(), OnMapReadyCallback {
         permissionRequest.launch(arrayOf(
             android.Manifest.permission.ACCESS_FINE_LOCATION,
             android.Manifest.permission.ACCESS_COARSE_LOCATION))
-
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         Log.d("Ik", "Fragment onCreateView")
         mapViewModel =
             ViewModelProvider(
@@ -57,10 +56,6 @@ class NaverMapFragment : Fragment(), OnMapReadyCallback {
         _binding = FragmentNaverMapBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        binding.mapNaverMyLocation.setOnClickListener {
-
-        }
-
         val mapFragment = childFragmentManager.findFragmentById(R.id.map_naver_frag) as MapFragment?
             ?: MapFragment.newInstance().also {
             childFragmentManager.beginTransaction().add(R.id.map_naver_frag, this).commit()
@@ -68,10 +63,7 @@ class NaverMapFragment : Fragment(), OnMapReadyCallback {
 
         locationSource = FusedLocationSource(this, 1000 )
 
-
-
         mapFragment.getMapAsync(this)
-
 
         return root
     }
@@ -100,6 +92,13 @@ class NaverMapFragment : Fragment(), OnMapReadyCallback {
         infoWindow.adapter = object : InfoWindow.DefaultTextAdapter(requireContext()){
             override fun getText(info: InfoWindow): CharSequence {
                 return "정보창 내용"
+            }
+        }
+        val customWindow = InfoWindow()
+        customWindow.adapter = object : InfoWindow.DefaultViewAdapter(requireContext()){
+            override fun getContentView(info: InfoWindow): View {
+
+                return cardBinding.cardInfoSample
             }
         }
 
