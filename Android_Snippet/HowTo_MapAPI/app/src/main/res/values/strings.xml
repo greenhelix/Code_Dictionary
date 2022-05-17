@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">HowToMapAPI</string>
-    <string name="title_naver_map">NaverMap</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
-</resources>
