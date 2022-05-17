@@ -10,26 +10,26 @@ typedef int ElementType;
 
 typedef struct tagNode
 {
-    ElementType Data;
+    Vertex* Data;
     struct tagNode *NextNode;
 } Node;
 
 typedef struct tagLinkedQueue
 {
-    Vertex *Front;
-    Vertex *Rear;
+    Node *Front;
+    Node *Rear;
     int Count;
 } LinkedQueue;
 
-void LQ_CreateQueue(LinkedQueue **Queue);
+LinkedQueue* LQ_CreateQueue();
 void LQ_DestroyQueue(LinkedQueue *Queue);
 
-Vertex *LQ_CreateNode(ElementType Data);
-void LQ_DestroyNode(Vertex *V);
+Node* LQ_CreateNode(Vertex* V);
+void LQ_DestroyNode(Node* _Node);
 
-void LQ_Enqueue(LinkedQueue *Queue, Vertex *V);
-Vertex *LQ_Dequeue(LinkedQueue *Queue);
+void LQ_Enqueue(LinkedQueue** Queue, Node *NewNode);
+Node* LQ_Dequeue(LinkedQueue** Queue);
 
 int LQ_IsEmpty(LinkedQueue *Queue);
-void LQ_Print(LinkedQueue *Queue);
+// void LQ_Print(LinkedQueue *Queue);
 #endif
