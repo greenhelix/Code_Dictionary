@@ -1,6 +1,6 @@
 #include "GraphTraversal.h"
-#include "Graph.h"
-#include "LinkedQueue.h"
+// #include "Graph.h"
+// #include "LinkedQueue.h"
 
 void DFS(Vertex *V)
 { // 시작점이 될 정점을 매개변수로 받습니다.
@@ -30,20 +30,20 @@ void BFS(Vertex *V, LinkedQueue *Queue)
 
     Edge *E = NULL;
 
-    printf("strat : %d ", V->Data); // BFS 의 시작점
+    printf("%d ", V->Data); // BFS 의 시작점
 
     V->Visited = Visited;
-
-    LQ_Enqueue(Queue, LQ_CreateNode(V->Data)); // 깊이랑 차이점! 연결리스트를 생성해줍니다.(노드를 담아줄 공간)
+        // 발견 !!
+    LQ_Enqueue(&Queue, LQ_CreateNode(V)); // 깊이랑 차이점! 연결리스트를 생성해줍니다.(노드를 담아줄 공간)
 
     while (!LQ_IsEmpty(Queue))
     { // 큐가 다 비어질 때까지 계속 돌린다~
         // LQ_Print(Queue);
 
-        Vertex *Popped = LQ_Dequeue(Queue); // 큐에서 맨앞에꺼 빼서 노드 객체로 선언~!
+        Node *Popped = LQ_Dequeue(&Queue); // 큐에서 맨앞에꺼 빼서 노드 객체로 선언~!
 
-        V->Data = Popped->Data;
-        printf("Dqeueu! %d\n", V->Data);
+        V = Popped->Data;
+        // printf("Dqeueu! %d\n", V->Data);
 
         E = V->AdjacencyList;
 
@@ -59,8 +59,8 @@ void BFS(Vertex *V, LinkedQueue *Queue)
 
                 V->Visited = Visited; // 방문 인증 해주고
 
-                LQ_Enqueue(Queue, LQ_CreateNode(V->Data)); // 큐에 추가!!!
-                printf("Enqueue! %d\n", V->Data);
+                LQ_Enqueue(&Queue, LQ_CreateNode(V)); // 큐에 추가!!!
+                // printf("Enqueue! %d\n", V->Data);
             }
 
             E = E->Next; // 조건 성립안된다면 다른 간선으로 이동~

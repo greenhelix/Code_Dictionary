@@ -35,6 +35,7 @@
     "**/.vscode/**"
   ],
   "files.associations": {
+    "*.json": "json",
     "array": "cpp",
     "atomic": "cpp",
     "bit": "cpp",
@@ -78,6 +79,8 @@
     "ostream": "cpp",
     "stdexcept": "cpp",
     "streambuf": "cpp",
-    "typeinfo": "cpp"
+    "typeinfo": "cpp",
+    "linkedqueue.h": "c",
+    "graph.h": "c"
   }
 }

@@ -1,6 +1,5 @@
 #include "Graph.h"
 #include "GraphTraversal.h"
-#include "LinkedQueue.h"
 
 int main(void)
 {
@@ -25,13 +24,18 @@ int main(void)
 
     AddEdge(V1, CreateEdge(V1, V2, 0));
     AddEdge(V1, CreateEdge(V1, V3, 0));
+
     AddEdge(V2, CreateEdge(V2, V4, 0));
     AddEdge(V2, CreateEdge(V2, V5, 0));
+
     AddEdge(V3, CreateEdge(V3, V4, 0));
     AddEdge(V3, CreateEdge(V3, V6, 0));
+
     AddEdge(V4, CreateEdge(V4, V5, 0));
     AddEdge(V4, CreateEdge(V4, V7, 0));
+
     AddEdge(V5, CreateEdge(V5, V7, 0));
+
     AddEdge(V6, CreateEdge(V6, V7, 0));
 
     printf("Enter Traversal Mode (0: DFS, 1:BFS) : ");
@@ -46,8 +50,7 @@ int main(void)
     else
     {
         // 너비 우선 탐색
-        LinkedQueue *Queue;
-        LQ_CreateQueue(&Queue);
+        LinkedQueue* Queue = LQ_CreateQueue();
         BFS(V1, Queue);
         LQ_DestroyQueue(Queue);
     }
