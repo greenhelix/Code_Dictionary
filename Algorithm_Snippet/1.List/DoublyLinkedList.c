@@ -66,25 +66,29 @@ void DLL_RemoveNode(Node **Head, Node *Remove)
             (*Head)->PrevNode = NULL;
 
         Remove->PrevNode = NULL;
-
         Remove->NextNode = NULL;
     }
     else
     {
         Node *Temp = Remove;
 
+        // 기존 remove에 해당된 옵션값들을 앞뒤 유저들에게 선물
         if (Remove->PrevNode != NULL)
             Remove->PrevNode->NextNode = Temp->NextNode;
 
         if (Remove->NextNode != NULL)
             Remove->NextNode->PrevNode = Temp->PrevNode;
 
+        // 꼭 초기화 해준다.
         Remove->PrevNode = NULL;
         Remove->NextNode = NULL;
     }
 };
 
 // 노드 탐색
+// 링크드 리스트의 약점 중 하나이다.
+// 헤드부터 시작해서 다음 노드에 대한 포인터를 징검다리 삼아 차근차근
+// 노의 수를 세어나가야만 원하는 요소에 접근이 가능하다.
 Node *DLL_GetNodeAt(Node *Head, int Location)
 {
 
