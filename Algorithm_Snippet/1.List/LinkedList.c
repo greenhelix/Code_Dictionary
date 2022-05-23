@@ -1,8 +1,9 @@
 #include "LinkedList.h"
 
-Node* LL_CreateNode(ElementType NewData){
-    
-    Node* NewNode = (Node*)malloc(sizeof(Node));
+Node *LL_CreateNode(ElementType NewData)
+{
+
+    Node *NewNode = (Node *)malloc(sizeof(Node));
 
     NewNode->Data = NewData;
     NewNode->NextNode = NULL;
@@ -10,70 +11,88 @@ Node* LL_CreateNode(ElementType NewData){
     return NewNode;
 };
 
-void LL_DestroyNode(Node* Node){
+void LL_DestroyNode(Node *Node)
+{
     free(Node);
 };
 
-void LL_AppendNode(Node** Head, Node* NewNode){
+void LL_AppendNode(Node **Head, Node *NewNode)
+{
 
-    if((*Head) == NULL){
+    if ((*Head) == NULL)
+    {
         *Head = NewNode;
     }
-    else{
-        Node* Tail = (*Head);
+    else
+    {
+        Node *Tail = (*Head);
 
-        while(Tail-> NextNode != NULL){
-            Tail = Tail->NextNode;    
+        while (Tail->NextNode != NULL)
+        {
+            Tail = Tail->NextNode;
         }
-        Tail -> NextNode = NewNode;
+        Tail->NextNode = NewNode;
     }
 };
 
-void LL_InsertAfter(Node* Current, Node* NewNode){
+void LL_InsertAfter(Node *Current, Node *NewNode)
+{
 
-    NewNode -> NextNode = Current->NextNode;
+    NewNode->NextNode = Current->NextNode;
 
-    Current -> NextNode = NewNode;
+    Current->NextNode = NewNode;
 };
 
-void LL_InsertNewHead(Node** Head, Node* NewHead){
+void LL_InsertNewHead(Node **Head, Node *NewHead)
+{
     if (*Head == NULL)
     {
         (*Head) = NewHead;
-    }else{
+    }
+    else
+    {
         NewHead->NextNode = (*Head);
         (*Head) = NewHead;
     }
 };
 
-void LL_RemoveNode(Node** Head, Node* Remove){
+void LL_RemoveNode(Node **Head, Node *Remove)
+{
     if (*Head == NULL)
     {
         (*Head) = Remove->NextNode;
-    }else{
-        Node* Current = *Head;
-        while(Current != NULL && Current -> NextNode != Remove){
+    }
+    else
+    {
+        Node *Current = *Head;
+        while (Current != NULL && Current->NextNode != Remove)
+        {
             Current = Current->NextNode;
         }
 
-        if(Current != NULL) Current -> NextNode = Remove ->NextNode;
+        if (Current != NULL)
+            Current->NextNode = Remove->NextNode;
     }
 };
 
-Node* LL_GetNodeAt(Node* Head, int Location){
-    Node* Current = Head;
-    while(Current != NULL && (--Location) >= 0 ){
+Node *LL_GetNodeAt(Node *Head, int Location)
+{
+    Node *Current = Head;
+    while (Current != NULL && (--Location) >= 0)
+    {
         Current = Current->NextNode;
     }
     return Current;
 };
 
-int LL_GetNodeCount(Node* Head){
-    int Count = 0; 
-    Node* Current = Head;
-    
-    while(Current != NULL){
-        Current = Current -> NextNode;
+int LL_GetNodeCount(Node *Head)
+{
+    int Count = 0;
+    Node *Current = Head;
+
+    while (Current != NULL)
+    {
+        Current = Current->NextNode;
         Count++;
     }
     return Count;
