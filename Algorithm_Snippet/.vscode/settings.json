@@ -81,6 +81,7 @@
     "streambuf": "cpp",
     "typeinfo": "cpp",
     "linkedqueue.h": "c",
-    "graph.h": "c"
+    "graph.h": "c",
+    "stdio.h": "c"
   }
 }
