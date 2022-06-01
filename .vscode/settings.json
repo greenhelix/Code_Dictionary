@@ -2,7 +2,7 @@
   "python.pythonPath": "C:\\Users\\dlrgh\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
   "java.javaPath": "C:\\Program Files\\Java\\jdk1.8.0_221\\bin\\java.exe",
   "java.project.sourcePaths": [
-    "Android_Snippet/daggerSample"
+    "Java_Snippet"
   ],
   "jupyter.jupyterServerType": "local",
   "C_Cpp.errorSquiggles": "Disabled",
