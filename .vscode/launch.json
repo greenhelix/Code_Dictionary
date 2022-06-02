@@ -6,6 +6,13 @@
       "name": "Launch Drive",
       "request": "launch",
       "mainClass": "Drive",
+      "projectName": "Code_Dictionary_5775a09b"
+    },
+    {
+      "type": "java",
+      "name": "Launch Drive",
+      "request": "launch",
+      "mainClass": "Drive",
       "projectName": "Code_Dictionary_32da74b4"
     },
     {
